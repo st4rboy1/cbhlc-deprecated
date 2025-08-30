@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enrollment Form</title>
+  <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="about.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <a href="index.html" class="logo">CBHLC </a>
+    <nav class="navigation">
+      <a href="about.html">About</a>
+      <button class="btnLogin-popup">Login</button>
+    </nav>
+  </header>
+  
+
+<section class="about-section">
+  <div class="container">
+    <h1 class="about-title">About Us</h1>
+    <p class="about-subtitle">
+      <b>Christian Bible Heritage Learning</b> Center is dedicated to nurturing children in both academics and faith, 
+      helping them grow into individuals with strong character and a brighter future.
+    </p>
+
+    <div class="about-content">
+      <!-- LEFT TEXT -->
+      <div class="text-box">
+        <h2>We’re here to enhance every child’s potential</h2>
+        <p>
+          Our mission is to provide quality education rooted in Christian values. 
+          The school emphasizes both academic excellence and spiritual development, 
+          ensuring that each child receives holistic growth. 
+          Through engaging programs, announcements, and activities, 
+          we support learners in achieving success while living by faith. </p><br>
+
+             <h2>Achievements</h2>
+        <p>
+          Our mission is to provide quality education rooted in Christian values. 
+          The school emphasizes both academic excellence and spiritual development, 
+          ensuring that each child receives holistic growth. 
+          
+
+          
+        </p>
+        <br>
+           <h2>Founded</h2>
+        <p>
+          Our mission is to provide quality education rooted in Christian values. 
+          The school emphasizes both academic excellence and spiritual development, 
+          ensuring that each child receives holistic growth. 
+          Through engaging programs, announcements, and activities, 
+          we support learners in achieving success while living by faith.
+
+          
+        </p>
+        </p>
+        <p class="bible-verse">“Start children off on the way they should go...” <br> — Proverbs 22:6</p>
+      </div>
+
+      
+      <!-- RIGHT IMAGE -->
+      <div class="image-box">
+        <img src="landing.png" alt="CBHLC Students">
+           <img src="landing.png" alt="CBHLC Students">
+      </div>     
+  </div>
+    
+      <div class="contact">
+        <a href="https://www.facebook.com/CBHLC.Pasig"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/awrabriguela/"><i class="fab fa-instagram"></i></a>
+       
+      </div>
+</section>
+
+  <!-- LOGIN / REGISTER / FORGOT -->
+  <div class="wrapper" style="display: none;">
+    <span class="icon-close"><ion-icon name="close-outline"></ion-icon></span>
+
+    <!-- LOGIN -->
+    <div class="form-box login">
+      <h2>Login</h2>
+      <br>
+      <form id="loginForm">
+        <div class="input-box">
+          <input type="text" placeholder="Username" required>
+        </div>
+        <div class="input-box">
+          <input type="password" placeholder="Password" required>
+        </div>
+        <div class="forgot-pass">
+          <a href="#" class="forgot-pass-btn">Forgot password?</a>
+        </div>
+        <br><br><br>
+        <button type="submit" class="btn">Login</button>
+        <div class="login-link">
+          <br>
+          <p>Don’t have an account? <a href="#" class="register-link-btn">Register</a></p>
+        </div>
+      </form>
+    </div>
+
+    <!-- RESET PASSWORD -->
+    <div class="form-box password">
+      <h2 class="reset-password">Reset Password</h2>
+      <form action="#">
+        <div class="input-box">
+          <input type="text" placeholder="Old Password" required>
+        </div>
+        <div class="input-box">
+          <input type="text" placeholder="New Password" required>
+        </div>
+        <div class="input-box">
+          <input type="password" placeholder="Confirm Password" required>
+        </div>
+        <button type="submit" class="btn">Confirm</button>
+        <div class="register-link">
+          <p>Already have an account? <a href="#" class="login-link-btn">Login</a></p>
+        </div>
+      </form>
+    </div>
+
+    <!-- REGISTER -->
+    <div class="form-box register">
+      <h2 class="registration-text">Create Account</h2>
+      <form action="#">
+        <div class="input-box">
+          <input type="text" placeholder="First Name" required>
+        </div>
+        <div class="input-box">
+          <input type="text" placeholder="Last Name">
+        </div>
+        <br>
+        <div class="input-box">
+          <input type="text" placeholder="Username" required>
+        </div>
+        <div class="input-box">
+          <input type="text" placeholder="Password" required>
+        </div>
+        <div class="input-box">
+          <input type="password" placeholder="Confirm Password" required>
+        </div>
+        <button type="submit" class="btn">Register</button>
+        <div class="register-link">
+          <p>Already have an account? <a href="#" class="login-link-btn">Login</a></p>
+        </div>
+      </form>
+    </div>
+  </div>
+  <script src="script.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
