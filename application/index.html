@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Enrollment</title>
-  <link rel="stylesheet" href="dashboard.css">
-  <link rel="stylesheet" href="enrollment.css">
+  <link rel="stylesheet" href="../dbstyle.css">
+  <link rel="stylesheet" href="../enrollment.css">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <script defer src="script.js"></script>
+  <script defer src="../script.js"></script>
   
 </head>
 <body>
@@ -16,7 +16,7 @@
     <!-- Sidebar (same as dashboard) -->
     <aside class="sidebar">
       <div class="sidebar-header">
-        <img src="ra_2022-06-19_22-17-45.jpg" alt="CBHLC Logo" class="logo">
+        <img src="../ra_2022-06-19_22-17-45.jpg" alt="CBHLC Logo" class="logo">
       </div>
 
       <ul class="nav-menu">
@@ -38,16 +38,15 @@
           <li class="nav-item" id ="studRepBtn">
           <i class="fas fa-book"></i><span>STUDENT REPORT</span>
         </li>
-             <li class="nav-item" id ="registrarBtn">
-                    <i class=" fas fa-building"></i>
-                    <span>REGISTRAR</span>
-                </li>
+          
+        
       </ul>
       <div class="logout">
         <li class="nav-item" id="logoutBtn">
           <i class="fas fa-sign-out-alt"></i><span>LOGOUT</span>
         </li>
       </div>
+      
     </aside>
 <!--NAV SIDE BAR, SAME LANG TO SA LAHAT NG SIDES  -->
 <!-- Enrollment Main Content -->
@@ -59,7 +58,7 @@
 
     <main class="main-content">
       <div class="top-bar">
-        <h1>ENROLL</h1>
+        <h1>ENROLL > View My Application</h1>
         <div class="user-info">
           <button class="icon-btn"><i class="fas fa-bell"></i></button>
           <span>Welcome, Bronny!</span>         
@@ -70,11 +69,10 @@
 
    
     <hr>
-
+    <h2>Edit Application</h2>
 
     <form id="applicationForm">
       <!-- Student details -->
-       <h2 style="font-size: 25px;">Student Details </h2>
       <div class="form-section">
         <div class="form-group">
           <label>Grade Level</label>
@@ -149,10 +147,8 @@
         <input type="file" required>
       </div>
 
-      <button type="submit" class="btn-submit">Submit</button>
       <nav class="navigation">
-        <br>
-      <a href="application.html">View and Edit My Application</a>
+          <a href="/enrollment/" style="font-size: 20px;">Save</a>
     </form>
   
   

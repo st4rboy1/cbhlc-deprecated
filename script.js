@@ -53,28 +53,28 @@ document.addEventListener("DOMContentLoaded", () => {
   if (enrollmentBtn) {
     enrollmentBtn.addEventListener("click", (e) => {
       e.preventDefault();
-      window.location.href = "enrollment.html";
+      window.location.href = "/enrollment/";
     });
   }
 
   if (billingBtn) {
     billingBtn.addEventListener("click", (e) => {
       e.preventDefault();
-      window.location.href = "billing.html";
+      window.location.href = "/billing/";
     });
   }
 
   if (studRepBtn) {
     studRepBtn.addEventListener("click", (e) => {
       e.preventDefault();
-      window.location.href = "studentrep.html";
+      window.location.href = "/studentrep/";
     });
   }
   // Regis
   if (registrarBtn) {
     registrarBtn.addEventListener("click", (e) => {
       e.preventDefault();
-      window.location.href = "registrar.html";
+      window.location.href = "/registrar/";
     });
   }
 
@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (logoutBtn) {
     logoutBtn.addEventListener("click", (e) => {
       e.preventDefault();
-      window.location.href = "index.html"; // balik login page
+      window.location.href = "/"; // balik login page
     });
   }
 
@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (dashboardBtn) {
     dashboardBtn.addEventListener("click", (e) => {
       e.preventDefault();
-      window.location.href = "dashboard.html";
+      window.location.href = "/dashboard/";
     });
   }
   
@@ -141,7 +141,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const password = form.querySelector("input[type='password']").value;
 
       if (email === "nero" && password === "sanjose") {
-        window.location.href = "dashboard.html";
+        window.location.href = "/dashboard/";
       } else {
         alert("Invalid email or password.");
       }

@@ -3,21 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Report</title>
-  <link rel="stylesheet" href="dashboard.css">
-  <link rel="stylesheet" href="enrollment.css">
+    <title>Billing</title>
+
+  <link rel="stylesheet" href="../enrollment.css">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <script defer src="script.js"></script>
-    
+  <script defer src="../script.js"></script>
+  
 </head>
- <body>  
-    
-    <div class="dashboard-container">
+<body>
+
+  <div class="dashboard-container">
     <!-- Sidebar (same as dashboard) -->
     <aside class="sidebar">
       <div class="sidebar-header">
-        <img src="ra_2022-06-19_22-17-45.jpg" alt="CBHLC Logo" class="logo">
+        <img src="../ra_2022-06-19_22-17-45.jpg" alt="CBHLC Logo" class="logo">
       </div>
 
       <ul class="nav-menu">
@@ -29,14 +29,14 @@
            <i class="fas fa-user-plus"></i><span>ENROLLMENT</span>
         </li>
 
-        <li class="nav-item" id="billingBtn">
+        <li class="nav-item active" id="billingBtn">
          <i class="fas fa-file-invoice"></i>
         <span>BILLING</span>
          <i class="fas fa-chevron-down" style="margin-left: auto;"></i>
         </li>
 
 
-          <li class="nav-item active" id ="studRepBtn">
+          <li class="nav-item" id ="studRepBtn">
           <i class="fas fa-book"></i><span>STUDENT REPORT</span>
         </li>
              <li class="nav-item" id ="registrarBtn">
@@ -44,16 +44,18 @@
                     <span>REGISTRAR</span>
                 </li>
       </ul>
-      <div class="logout" id="logoutBtn">
-        <li class="nav-item">
+      <div class="logout">
+         <li class="nav-item" id="logoutBtn">
           <i class="fas fa-sign-out-alt"></i><span>LOGOUT</span>
         </li>
       </div>
-       </aside>
+    </aside>
+       <!-- Sidebar (same as dashboard) -->
 </body>
-<div class="main-content">
+
+  <div class="main-content">
         <div class="top-bar">
-            <h1 id="pageTitle">STUDENT REPORT</h1>
+            <h1 id="pageTitle">BILLING</h1>
             <div class="user-info">
                 <button class="icon-btn"><i class="fas fa-bell"></i></button>
                 <span>Welcome, Bronny!</span>
