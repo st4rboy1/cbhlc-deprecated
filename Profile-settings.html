@@ -6,7 +6,6 @@
     <title>Billing</title>
 <link rel="stylesheet" href="dbstyle.css">
   <link rel="stylesheet" href="enrollment.css">
-  <link rel="stylesheet" href="bill.css">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <script defer src="script.js"></script>
@@ -71,7 +70,7 @@
 
   <div class="main-content">
         <div class="top-bar">
-            <h1 id="pageTitle">BILLING</h1>
+            <h1 id="pageTitle">INVOICE</h1>
             <div class="user-info">
           <button class="icon-btn"id="openModal"><i class="fas fa-bell"></i>
           <span class="badge">3</span></button>
@@ -108,57 +107,65 @@
         </div>
         
    </div>
-   <div class="billing-container">
-  <!-- Dropdown Filters -->
-  <div class="filters">
-    <div class="filter-group">
-      <label for="academicYear">Academic Year</label>
-      <select id="academicYear">
-        <option value="2025-2026">2025-2026</option>
-        <option value="2024-2025">2024-2025</option>
-      </select>
-    </div>
-    <div class="filter-group">
-      <label for="gradeLevel">Grade Level</label>
-      <select id="gradeLevel">
-        <option value="nursery">Nursery-Kinder</option>
-        <option value="grade1">Grade 1</option>
-        <option value="grade2">Grade 2</option>
-      </select>
-    </div>
-    <div class="filter-group">
-      <label for="paymentPlan">Payment Plan</label>
-      <select id="paymentPlan">
-        <option value="monthly">Monthly</option>
-        <option value="semestral">Semestral</option>
-        <option value="annual">Annual</option>
-      </select>
-    </div>
-  </div>
+   <div class="Profile-Settings">
+        <div class="filter-group">
+                    <div class="profile-menu-container">
+            <div class="profile-header">
+                <img src="ra_2022-06-19_22-17-45.jpg" alt="Profile Avatar" class="avatar">
+                <div>
+                    <h3>Bronny</h3>
+                    <p style="margin: 0; font-size: 0.9rem; color: #000000;">View profile</p>
+                </div>
+            </div>
+            
+            <div class="profile-list">
+                <div class="profile-option">
+                    <i class="fas fa-user"></i>
+                    <span>Profile</span>
+                </div>
+                <div class="profile-option" style="justify-content: center;">
+                    <i class="fas fa-users" style="margin-right: 10px;"></i>
+                    <span>See all profiles</span>
+                </div>
+                <div class="profile-option">
+                    <i class="fas fa-cog"></i>
+                    <span>Settings & privacy</span>
+                    <i class="fas fa-chevron-right arrow"></i>
+                </div>
+                <div class="profile-option">
+                    <i class="fas fa-question-circle"></i>
+                    <span>Help & support</span>
+                    <i class="fas fa-chevron-right arrow"></i>
+                </div>
+                <div class="profile-option">
+                    <i class="fas fa-adjust"></i>
+                    <span>Display & accessibility</span>
+                    <i class="fas fa-chevron-right arrow"></i>
+                </div>
+                <div class="profile-option">
+                    <i class="fas fa-comment-dots"></i>
+                    <span>Give feedback</span>
+                </div>
+                <div class="profile-option logout-option">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Log Out</span>
+                </div>
+            </div>
 
-  <!-- Payment Plans -->
-  <div class="payment-section">
-    <div class="payment-card">
-      <h3>Monthly</h3>
-      <p><strong>Tuition Fee:</strong> ₱10,000</p>
-      <p><strong>Miscellaneous:</strong> ₱3,000</p>
-      <p><strong>Total:</strong> ₱13,000</p>
-    </div>
-
-    <div class="payment-card">
-      <h3>Semestral</h3>
-      <p><strong>Tuition Fee:</strong> ₱20,000</p>
-      <p><strong>Miscellaneous:</strong> ₱5,000</p>
-      <p><strong>Total:</strong> ₱25,000</p>
-    </div>
-
-    <div class="payment-card">
-      <h3>Annual</h3>
-      <p><strong>Tuition Fee:</strong> ₱38,000</p>
-      <p><strong>Miscellaneous:</strong> ₱7,000</p>
-      <p><strong>Total:</strong> ₱45,000</p>
-    </div>
-  </div>
+            <div class="privacy-links">
+                <a href="#">Privacy</a>
+                <span>·</span>
+                <a href="#">Terms</a>
+                <span>·</span>
+                <a href="#">Advertising</a>
+                <span>·</span>
+                <a href="#">Ad Choices</a>
+                <i class="fas fa-caret-right"></i>
+                <span>·</span>
+                <a href="#">Cookies</a>
+                <span>·</span>
+                <a href="#">More</a>
+            </div>
 </div>
 
 </html>

@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Billing</title>
+    <title>Invoice</title>
 <link rel="stylesheet" href="dbstyle.css">
   <link rel="stylesheet" href="enrollment.css">
-  <link rel="stylesheet" href="bill.css">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <script defer src="script.js"></script>
@@ -71,7 +70,7 @@
 
   <div class="main-content">
         <div class="top-bar">
-            <h1 id="pageTitle">BILLING</h1>
+            <h1 id="pageTitle">INVOICE</h1>
             <div class="user-info">
           <button class="icon-btn"id="openModal"><i class="fas fa-bell"></i>
           <span class="badge">3</span></button>
@@ -108,57 +107,77 @@
         </div>
         
    </div>
-   <div class="billing-container">
-  <!-- Dropdown Filters -->
-  <div class="filters">
-    <div class="filter-group">
-      <label for="academicYear">Academic Year</label>
-      <select id="academicYear">
-        <option value="2025-2026">2025-2026</option>
-        <option value="2024-2025">2024-2025</option>
-      </select>
-    </div>
-    <div class="filter-group">
-      <label for="gradeLevel">Grade Level</label>
-      <select id="gradeLevel">
-        <option value="nursery">Nursery-Kinder</option>
-        <option value="grade1">Grade 1</option>
-        <option value="grade2">Grade 2</option>
-      </select>
-    </div>
-    <div class="filter-group">
-      <label for="paymentPlan">Payment Plan</label>
-      <select id="paymentPlan">
-        <option value="monthly">Monthly</option>
-        <option value="semestral">Semestral</option>
-        <option value="annual">Annual</option>
-      </select>
-    </div>
+   <div class="invoice-container">
+            <div class="invoice-header">
+                <div class="invoice-logo">
+                    
+                    <img src="ra_2022-06-19_22-17-45.jpg" alt="CBHLC Logo" class="logo">
+                </div>
+                <div class="school-info">
+                    <h3>Christian Bible Heritage Learning Center</h3>
+                    <p>123 School St, City, Country</p>
+                    <p>Phone: (02) 123-4567</p>
+                    <p>Email: info@cbhlc.edu</p>
+                </div>
+             <div class="invoice-details">
+                <div class="student-info">
+                    <p><strong>Billed To:</strong></p>
+                    <p>Bronny James</p>
+                    <p>Grade Level: Grade 2</p>
+                </div>
+                <div class="invoice-meta">
+                    <p><strong>Invoice #:</strong> INV-00123</p>
+                    <p><strong>Invoice Date:</strong> October 20, 2023</p>
+                    <p><strong>Due Date:</strong> October 31, 2023</p>
+                </div>
+            </div>
+            <table class="invoice-table">
+                <thead>
+                    <tr>
+                        <th>Description</th>
+                        <th>Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Tuition Fee (Monthly)</td>
+                        <td>₱10,000.00</td>
+                    </tr>
+                    <tr>
+                        <td>Miscellaneous Fee</td>
+                        <td>₱3,000.00</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="1">Subtotal</td>
+                        <td>₱13,000.00</td>
+                    </tr>
+                    <tr>
+                        <td colspan="1">Less: Discounts & Rebates</td>
+                        <td>₱0.00</td>
+                    </tr>
+                    <tr>
+                        <td colspan="1" class="total-amount">TOTAL DUE</td>
+                        <td class="total-amount">₱13,000.00</td>
+                    </tr>
+                </tfoot>
+            </table>
   </div>
-
-  <!-- Payment Plans -->
-  <div class="payment-section">
-    <div class="payment-card">
-      <h3>Monthly</h3>
-      <p><strong>Tuition Fee:</strong> ₱10,000</p>
-      <p><strong>Miscellaneous:</strong> ₱3,000</p>
-      <p><strong>Total:</strong> ₱13,000</p>
-    </div>
-
-    <div class="payment-card">
-      <h3>Semestral</h3>
-      <p><strong>Tuition Fee:</strong> ₱20,000</p>
-      <p><strong>Miscellaneous:</strong> ₱5,000</p>
-      <p><strong>Total:</strong> ₱25,000</p>
-    </div>
-
-    <div class="payment-card">
-      <h3>Annual</h3>
-      <p><strong>Tuition Fee:</strong> ₱38,000</p>
-      <p><strong>Miscellaneous:</strong> ₱7,000</p>
-      <p><strong>Total:</strong> ₱45,000</p>
-    </div>
-  </div>
+  <div class="terms-notes">
+                <h4>Payment Instructions:</h4>
+                <p>Please pay the total amount by the due date to avoid penalties. Payments can be made via online transfer or bank deposit to our official school accounts.</p>
+                <p>Thank you for your prompt payment!</p>
+            </div>
+            
+            <div class="invoice-actions">
+                <button class="print-btn"><i class="fas fa-print"></i> Print</button>
+                <button class="download-btn"><i class="fas fa-download"></i> Download</button>
+            </div>
 </div>
 
 </html>
