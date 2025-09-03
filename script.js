@@ -11,7 +11,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const billingBtn = document.getElementById("billingBtn");
   const studRepBtn = document.getElementById("studRepBtn");
   const registrarBtn = document.getElementById("registrarBtn");
-
+const modal = document.getElementById("openModal");
+const closeBtns = document.getElementById("closeModal");
+const openBtn = document.getElementById("openModal")
 
   // Open login form
   if (btnPopup) {
@@ -144,6 +146,78 @@ document.addEventListener("DOMContentLoaded", () => {
         window.location.href = "dashboard.html";
       } else {
         alert("Invalid email or password.");
+      }
+    });
+  }
+});
+document.addEventListener("DOMContentLoaded", () => {
+  const dropdownItems = document.querySelectorAll(".nav-item.has-dropdown");
+
+  dropdownItems.forEach(item => {
+    item.addEventListener("click", () => {
+      item.classList.toggle("active");
+    });
+  });
+});
+
+document.querySelectorAll(".has-dropdown .nav-link").forEach(link => {
+  link.addEventListener("click", (e) => {
+    e.stopPropagation(); // para hindi magsara agad
+    const dropdown = link.nextElementSibling;
+
+    // Close other dropdowns
+    document.querySelectorAll(".has-dropdown .dropdown").forEach(d => {
+      if (d !== dropdown) {
+        d.style.opacity = 0;
+        d.style.visibility = "hidden";
+        d.style.transform = "translateY(-10px)";
+      }
+    });
+
+    // Toggle this dropdown
+    if (dropdown.style.visibility === "visible") {
+      dropdown.style.opacity = 0;
+      dropdown.style.visibility = "hidden";
+      dropdown.style.transform = "translateY(-10px)";
+    } else {
+      dropdown.style.opacity = 1;
+      dropdown.style.visibility = "visible";
+      dropdown.style.transform = "translateY(0)";
+    }
+  });
+});
+
+// 🔥 Make sure <a> links work
+document.querySelectorAll(".has-dropdown .dropdown a").forEach(a => {
+  a.addEventListener("click", (e) => {
+    // allow default redirect
+    window.location.href = a.getAttribute("href");
+  });
+});
+
+// Close dropdown on outside click
+document.addEventListener("click", () => {
+  document.querySelectorAll(".has-dropdown .dropdown").forEach(d => {
+    d.style.opacity = 0;
+    d.style.visibility = "hidden";
+    d.style.transform = "translateY(-10px)";
+  });
+});
+document.addEventListener("DOMContentLoaded", () => {
+  const notifBtn = document.getElementById("openModal");
+  const notifDropdown = document.getElementById("notificationDropdown");
+
+  if (notifBtn && notifDropdown) {
+    notifBtn.addEventListener("click", (e) => {
+      e.stopPropagation(); // para di magsara agad
+      notifDropdown.style.display =
+        notifDropdown.style.display === "block" ? "none" : "block";
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener("click", (event) => {
+      if (!notifDropdown.contains(event.target) && event.target !== notifBtn) {
+        notifDropdown.style.display = "none";
       }
     });
   }
