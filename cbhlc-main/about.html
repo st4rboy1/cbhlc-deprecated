@@ -5,77 +5,68 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Enrollment Form</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="about.css">
-
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
-<body>
-  <header>
-    <a href="index.html" class="logo">CBHLC </a>
+<body class="bg-gray-100">
+  <header class="flex justify-between items-center py-4 px-8 bg-white shadow-md">
+    <a href="index.html" class="text-2xl font-bold text-gray-800">CBHLC </a>
     <nav class="navigation">
-      <a href="about.html">About</a>
-      <button class="btnLogin-popup">Login</button>
+      <a href="about.html" class="text-gray-600 hover:text-gray-800">About</a>
+      <button class="ml-4 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">Login</button>
     </nav>
   </header>
 
 
-  <section class="about-section">
-    <div class="container">
-      <h1 class="about-title">About Us</h1>
-      <p class="about-subtitle">
+  <section class="py-16 px-20 text-center">
+    <div class="container mx-auto">
+      <h1 class="text-4xl font-bold text-gray-800 mb-2">About Us</h1>
+      <p class="max-w-2xl mx-auto text-lg text-gray-600 mb-12">
         <b>Christian Bible Heritage Learning</b> Center is dedicated to nurturing children in both academics and faith,
         helping them grow into individuals with strong character and a brighter future.
       </p>
 
-      <div class="about-content">
+      <div class="flex justify-between items-center gap-10 flex-wrap mx-auto max-w-6xl">
         <!-- LEFT TEXT -->
-        <div class="text-box">
-          <h2>We’re here to enhance every child’s potential</h2>
-          <p>
+        <div class="flex-1 text-left">
+          <h2 class="text-3xl font-bold text-gray-800 mb-4">We’re here to enhance every child’s potential</h2>
+          <p class="text-base text-gray-700 leading-relaxed">
             Our mission is to provide quality education rooted in Christian values.
             The school emphasizes both academic excellence and spiritual development,
             ensuring that each child receives holistic growth.
             Through engaging programs, announcements, and activities,
             we support learners in achieving success while living by faith. </p><br>
 
-          <h2>Achievements</h2>
-          <p>
+          <h2 class="text-3xl font-bold text-gray-800 mb-4">Achievements</h2>
+          <p class="text-base text-gray-700 leading-relaxed">
             Our mission is to provide quality education rooted in Christian values.
             The school emphasizes both academic excellence and spiritual development,
             ensuring that each child receives holistic growth.
-
-
-
           </p>
           <br>
-          <h2>Founded</h2>
-          <p>
+          <h2 class="text-3xl font-bold text-gray-800 mb-4">Founded</h2>
+          <p class="text-base text-gray-700 leading-relaxed">
             Our mission is to provide quality education rooted in Christian values.
             The school emphasizes both academic excellence and spiritual development,
             ensuring that each child receives holistic growth.
             Through engaging programs, announcements, and activities,
             we support learners in achieving success while living by faith.
-
-
           </p>
-          </p>
-          <p class="bible-verse">“Start children off on the way they should go...” <br> — Proverbs 22:6</p>
+          <p class="mt-4 text-green-700 font-bold italic">“Start children off on the way they should go...” <br> — Proverbs 22:6</p>
         </div>
 
 
         <!-- RIGHT IMAGE -->
-        <div class="image-box">
-          <img src="landing.png" alt="CBHLC Students">
-          <img src="landing.png" alt="CBHLC Students">
+        <div class="flex-1 text-center">
+          <img src="landing.png" alt="CBHLC Students" class="max-w-full rounded-lg shadow-lg mb-4">
+          <img src="landing.png" alt="CBHLC Students" class="max-w-full rounded-lg shadow-lg">
         </div>
       </div>
 
-      <div class="contact">
-        <a href="https://www.facebook.com/CBHLC.Pasig"><i class="fab fa-facebook"></i></a>
-        <a href="https://www.instagram.com/awrabriguela/"><i class="fab fa-instagram"></i></a>
-
+      <div class="flex justify-center gap-4 mt-8">
+        <a href="https://www.facebook.com/CBHLC.Pasig" class="text-2xl"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/awrabriguela/" class="text-2xl"><i class="fab fa-instagram"></i></a>
       </div>
   </section>
 
@@ -157,3 +148,5 @@
     <script src="script.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
