@@ -1,0 +1,13 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #eef2f5;
+    color: #fa3636;
+}
+
+/* ==== LAYOUT CONTAINER ==== */
+.dashboard-container {
+    display: flex;
+    min-height: 100vh;
+}
