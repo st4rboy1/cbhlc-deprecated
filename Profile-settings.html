@@ -4,103 +4,100 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Billing</title>
-<link rel="stylesheet" href="dbstyle.css">
-  <link rel="stylesheet" href="enrollment.css">
-
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <script defer src="script.js"></script>
   
 </head>
-<body>
+<body class="font-['Segoe_UI',Tahoma,Geneva,Verdana,sans-serif] m-0 p-0 bg-[#eef2f5] text-[#333]">
 
-  <div class="dashboard-container">
+  <div class="flex min-h-screen">
     <!-- Sidebar (same as dashboard) -->
-    <aside class="sidebar">
-      <div class="sidebar-header">
-        <img src="ra_2022-06-19_22-17-45.jpg" alt="CBHLC Logo" class="logo">
+    <aside class="w-[280px] bg-[#2c3e50] text-[#ecf0f1] shadow-[2px_0_10px_rgba(0,0,0,0.15)] py-5 flex flex-col justify-between">
+      <div class="text-center pt-2.5 pb-7">
+        <img src="ra_2022-06-19_22-17-45.jpg" alt="CBHLC Logo" class="w-[120px] h-auto rounded-full border-3 border-[#3498db]">
       </div>
-<ul class="nav-menu">
-  <li class="nav-item" id="dashboardBtn">
-    <i class="fas fa-chart-line"></i><span>DASHBOARD</span>
+<ul class="list-none p-0 m-0">
+  <li class="nav-item flex items-center py-4 px-6 my-1 mx-4 rounded-lg cursor-pointer transition-all duration-300 ease-in-out hover:bg-[#34495e] hover:text-white" id="dashboardBtn">
+    <i class="fas fa-chart-line mr-5 text-xl text-[#bdc3c7] transition-colors duration-300 ease-in-out"></i><span class="font-medium">DASHBOARD</span>
   </li>
 
-  <li class="nav-item" id="enrollmentBtn">
-    <i class="fas fa-user-plus"></i><span>ENROLLMENT</span>
+  <li class="nav-item flex items-center py-4 px-6 my-1 mx-4 rounded-lg cursor-pointer transition-all duration-300 ease-in-out hover:bg-[#34495e] hover:text-white" id="enrollmentBtn">
+    <i class="fas fa-user-plus mr-5 text-xl text-[#bdc3c7] transition-colors duration-300 ease-in-out"></i><span class="font-medium">ENROLLMENT</span>
   </li>
 
   <!-- BILLING WITH DROPDOWN -->
-<li class="nav-item has-dropdown" id="billingBtn">
+<li class="nav-item has-dropdown flex items-center py-4 px-6 my-1 mx-4 rounded-lg cursor-pointer transition-all duration-300 ease-in-out hover:bg-[#34495e] hover:text-white" id="billingBtn">
     <div class="nav-link">
-      <i class="fas fa-file-invoice"></i>
-      <span>BILLING</span>
+      <i class="fas fa-file-invoice mr-5 text-xl text-[#bdc3c7] transition-colors duration-300 ease-in-out"></i>
+      <span class="font-medium">BILLING</span>
       <i class="fas fa-chevron-down arrow" style="margin-left: 55px;"></i>
     </div>
-    <ul class="dropdown">
+    <ul class="dropdown hidden">
       <li>Tuition Fee</li>
 
       <li>Generate Invoice</li>
     </ul>
   </li>
 
-  <li class="nav-item" id="studRepBtn">
-    <i class="fas fa-book"></i><span>STUDENT REPORT</span>
+  <li class="nav-item flex items-center py-4 px-6 my-1 mx-4 rounded-lg cursor-pointer transition-all duration-300 ease-in-out hover:bg-[#34495e] hover:text-white" id="studRepBtn">
+    <i class="fas fa-book mr-5 text-xl text-[#bdc3c7] transition-colors duration-300 ease-in-out"></i><span class="font-medium">STUDENT REPORT</span>
   </li>
 
-<li class="nav-item has-dropdown" id="registrarBtn">
+<li class="nav-item has-dropdown flex items-center py-4 px-6 my-1 mx-4 rounded-lg cursor-pointer transition-all duration-300 ease-in-out hover:bg-[#34495e] hover:text-white" id="registrarBtn">
         <div class="nav-link">
-            <i class="fas fa-building"></i>
-            <span>REGISTRAR</span>
+            <i class="fas fa-building mr-5 text-xl text-[#bdc3c7] transition-colors duration-300 ease-in-out"></i>
+            <span class="font-medium">REGISTRAR</span>
             <i class="fas fa-chevron-down arrow" style="margin-left: 30px;"></i>
         </div>
-        <ul class="dropdown">
+        <ul class="dropdown hidden">
             <li>Student Records</li>
             <li>Enrollment List</li>
             <li>Clearances</li>
         </ul>
     </li>
 </ul>
-      <div class="logout">
-         <li class="nav-item" id="logoutBtn">
-          <i class="fas fa-sign-out-alt"></i><span>LOGOUT</span>
+      <div class="logout mt-auto w-[280px]">
+         <li class="nav-item flex items-center py-4 px-6 my-1 mx-4 rounded-lg cursor-pointer transition-all duration-300 ease-in-out bg-[#f5f5f5] text-black rounded-lg hover:bg-[#c0392b]" id="logoutBtn">
+          <i class="fas fa-sign-out-alt mr-5 text-xl text-[#bdc3c7] transition-colors duration-300 ease-in-out"></i><span class="font-medium">LOGOUT</span>
         </li>
       </div>
     </aside>
  
-</body>
 
-  <div class="main-content">
-        <div class="top-bar">
-            <h1 id="pageTitle">INVOICE</h1>
-            <div class="user-info">
-          <button class="icon-btn"id="openModal"><i class="fas fa-bell"></i>
-          <span class="badge">3</span></button>
-          <span>Welcome, Bronny!</span>         
-         <button class="icon-btn"><i class="fas fa-user-circle"></i></button>
-           <div class="notification-dropdown" id="notificationDropdown">
-                    <h3>Notifications</h3>
-                    <div class="notification-item new">
-                        <img src="ra_2022-06-19_22-17-45.jpg" alt="User">
-                        <div class="notification-text">
-                            <strong>Bronny James</strong> added you to the folder <b>Web App Designs 2019</b>
-                            <div class="time">Today at 12:28 PM</div>
+  <div class="flex-grow py-7 px-12 flex flex-col">
+        <div class="top-bar flex justify-between items-center py-4 border-b-2 border-gray-300 mb-5">
+            <h1 id="pageTitle" class="m-0 text-3xl text-[#2c3e50]">INVOICE</h1>
+            <div class="user-info flex items-center relative">
+          <button class="icon-btn bg-transparent border-none cursor-pointer text-2xl ml-4 text-[#95a5a6] transition-colors duration-300 relative"id="openModal"><i class="fas fa-bell"></i>
+          <span class="badge absolute top-[-5px] right-[-5px] bg-red-500 text-white text-xs py-0.5 px-1.5 rounded-full">3</span></button>
+          <span class="mr-5 font-medium text-[#555]">Welcome, Bronny!</span>         
+         <button class="icon-btn bg-transparent border-none cursor-pointer text-2xl ml-4 text-[#95a5a6] transition-colors duration-300 relative"><i class="fas fa-user-circle"></i></button>
+           <div class="notification-dropdown hidden absolute top-[50px] right-0 w-[350px] bg-white rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.15)] p-4 z-[1000]" id="notificationDropdown">
+                    <h3 class="m-0 mb-2.5 text-lg text-[#2c3e50] border-b border-gray-300 pb-2">Notifications</h3>
+                    <div class="notification-item new flex items-start my-3 pb-3 border-b border-gray-100">
+                        <img src="ra_2022-06-19_22-17-45.jpg" alt="User" class="w-10 h-10 rounded-full flex-shrink-0 mr-3">
+                        <div class="notification-text flex-1 text-sm text-[#333]">
+                            <strong class="text-[#2c3e50]">Bronny James</strong> added you to the folder <b>Web App Designs 2019</b>
+                            <div class="time text-xs text-[#777] my-1 mb-1.5">Today at 12:28 PM</div>
                           
                         </div>
                     </div>
 
-                    <div class="notification-item new">
-                        <img src="ra_2022-06-19_22-17-45.jpg" alt="User">
-                        <div class="notification-text">
-                            <strong>Bronny James</strong> invited you to the folder <b>EMEA Major Deal Close Plans</b>
-                            <div class="time">Yesterday at 5:15 PM</div>
+                    <div class="notification-item new flex items-start my-3 pb-3 border-b border-gray-100">
+                        <img src="ra_2022-06-19_22-17-45.jpg" alt="User" class="w-10 h-10 rounded-full flex-shrink-0 mr-3">
+                        <div class="notification-text flex-1 text-sm text-[#333]">
+                            <strong class="text-[#2c3e50]">Bronny James</strong> invited you to the folder <b>EMEA Major Deal Close Plans</b>
+                            <div class="time text-xs text-[#777] my-1 mb-1.5">Yesterday at 5:15 PM</div>
                        
                         </div>
                     </div>
 
-                    <div class="notification-item">
-                        <div class="circle-avatar">AS</div>
-                        <div class="notification-text">
-                            <strong>Bronny James</strong> added you to <b>Enterprise Corporation Contracts.pdf</b>
-                            <div class="time">Sep 20 at 3:13 PM</div>
+                    <div class="notification-item flex items-start my-3 pb-3 border-b-0">
+                        <div class="circle-avatar w-10 h-10 rounded-full flex-shrink-0 mr-3 bg-[#2c3e50] text-white text-sm flex justify-center items-center font-bold">AS</div>
+                        <div class="notification-text flex-1 text-sm text-[#333]">
+                            <strong class="text-[#2c3e50]">Bronny James</strong> added you to <b>Enterprise Corporation Contracts.pdf</b>
+                            <div class="time text-xs text-[#777] my-1 mb-1.5">Sep 20 at 3:13 PM</div>
                         </div>
                     </div>
                 </div>
@@ -108,64 +105,66 @@
         
    </div>
    <div class="Profile-Settings">
-        <div class="filter-group">
+        <div class="filter-group flex flex-col min-w-[180px]">
                     <div class="profile-menu-container">
-            <div class="profile-header">
-                <img src="ra_2022-06-19_22-17-45.jpg" alt="Profile Avatar" class="avatar">
+            <div class="profile-header flex items-center">
+                <img src="ra_2022-06-19_22-17-45.jpg" alt="Profile Avatar" class="avatar w-12 h-12 rounded-full mr-4">
                 <div>
-                    <h3>Bronny</h3>
+                    <h3 class="m-0 text-lg font-semibold">Bronny</h3>
                     <p style="margin: 0; font-size: 0.9rem; color: #000000;">View profile</p>
                 </div>
             </div>
             
-            <div class="profile-list">
-                <div class="profile-option">
-                    <i class="fas fa-user"></i>
+            <div class="profile-list mt-4">
+                <div class="profile-option flex items-center p-3 rounded-lg hover:bg-gray-200 cursor-pointer">
+                    <i class="fas fa-user w-6 text-center mr-3"></i>
                     <span>Profile</span>
                 </div>
-                <div class="profile-option" style="justify-content: center;">
-                    <i class="fas fa-users" style="margin-right: 10px;"></i>
+                <div class="profile-option flex items-center p-3 rounded-lg hover:bg-gray-200 cursor-pointer justify-center">
+                    <i class="fas fa-users w-6 text-center mr-3" style="margin-right: 10px;"></i>
                     <span>See all profiles</span>
                 </div>
-                <div class="profile-option">
-                    <i class="fas fa-cog"></i>
+                <div class="profile-option flex items-center p-3 rounded-lg hover:bg-gray-200 cursor-pointer">
+                    <i class="fas fa-cog w-6 text-center mr-3"></i>
                     <span>Settings & privacy</span>
-                    <i class="fas fa-chevron-right arrow"></i>
+                    <i class="fas fa-chevron-right arrow ml-auto"></i>
                 </div>
-                <div class="profile-option">
-                    <i class="fas fa-question-circle"></i>
+                <div class="profile-option flex items-center p-3 rounded-lg hover:bg-gray-200 cursor-pointer">
+                    <i class="fas fa-question-circle w-6 text-center mr-3"></i>
                     <span>Help & support</span>
-                    <i class="fas fa-chevron-right arrow"></i>
+                    <i class="fas fa-chevron-right arrow ml-auto"></i>
                 </div>
-                <div class="profile-option">
-                    <i class="fas fa-adjust"></i>
+                <div class="profile-option flex items-center p-3 rounded-lg hover:bg-gray-200 cursor-pointer">
+                    <i class="fas fa-adjust w-6 text-center mr-3"></i>
                     <span>Display & accessibility</span>
-                    <i class="fas fa-chevron-right arrow"></i>
+                    <i class="fas fa-chevron-right arrow ml-auto"></i>
                 </div>
-                <div class="profile-option">
-                    <i class="fas fa-comment-dots"></i>
+                <div class="profile-option flex items-center p-3 rounded-lg hover:bg-gray-200 cursor-pointer">
+                    <i class="fas fa-comment-dots w-6 text-center mr-3"></i>
                     <span>Give feedback</span>
                 </div>
-                <div class="profile-option logout-option">
-                    <i class="fas fa-sign-out-alt"></i>
+                <div class="profile-option logout-option flex items-center p-3 rounded-lg hover:bg-gray-200 cursor-pointer">
+                    <i class="fas fa-sign-out-alt w-6 text-center mr-3"></i>
                     <span>Log Out</span>
                 </div>
             </div>
 
-            <div class="privacy-links">
-                <a href="#">Privacy</a>
-                <span>·</span>
-                <a href="#">Terms</a>
-                <span>·</span>
-                <a href="#">Advertising</a>
-                <span>·</span>
-                <a href="#">Ad Choices</a>
-                <i class="fas fa-caret-right"></i>
-                <span>·</span>
-                <a href="#">Cookies</a>
-                <span>·</span>
-                <a href="#">More</a>
+            <div class="privacy-links mt-4 text-xs text-gray-500">
+                <a href="#" class="hover:underline">Privacy</a>
+                <span class="mx-1">·</span>
+                <a href="#" class="hover:underline">Terms</a>
+                <span class="mx-1">·</span>
+                <a href="#" class="hover:underline">Advertising</a>
+                <span class="mx-1">·</span>
+                <a href="#" class="hover:underline">Ad Choices</a>
+                <i class="fas fa-caret-right ml-1"></i>
+                <span class="mx-1">·</span>
+                <a href="#" class="hover:underline">Cookies</a>
+                <span class="mx-1">·</span>
+                <a href="#" class="hover:underline">More</a>
             </div>
 </div>
-
+</div>
+</div>
+</body>
 </html>
