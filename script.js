@@ -221,4 +221,39 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
+
+  document.addEventListener("DOMContentLoaded", () => {
+  const registerForm = document.getElementById("registerForm");
+  if (registerForm) {
+    // Check if submit button already exists
+    if (!document.getElementById("registerBtn")) {
+      const submitBtn = document.createElement("button");
+      submitBtn.type = "submit";
+      submitBtn.className = "btn";
+      submitBtn.id = "registerBtn";
+      submitBtn.textContent = "Register";
+      registerForm.appendChild(submitBtn);
+    }
+
+    registerForm.addEventListener("submit", function(e) {
+      e.preventDefault();
+      const formData = new FormData(registerForm);
+
+      fetch("register.php", {
+        method: "POST",
+        body: formData
+      })
+      .then(response => response.text())
+      .then(data => {
+        if (data === "success") {
+          alert("Registration successful!");
+          registerForm.reset();
+        } else {
+          alert("Registration failed.");
+        }
+      });
+    });
+  }
 });
+});
+
